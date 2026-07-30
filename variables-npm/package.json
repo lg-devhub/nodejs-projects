@@ -1,0 +1,13 @@
+{
+  "name": "variables-npm",
+  "version": "1.0.0",
+  "description": "manipulating variables with npm at nodejs",
+  "main": "main.js",
+  "scripts": {
+    "start:dev": "node --env-file=.env --watch src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
