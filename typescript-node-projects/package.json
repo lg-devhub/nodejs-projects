@@ -1,0 +1,22 @@
+{
+  "name": "typescript-node-projects",
+  "version": "1.0.0",
+  "description": "nodejs with typescript",
+  "main": "index.js",
+  "scripts": {
+    "dist": "npx tsc",
+    "start:dev": "tsx src/index.ts",
+    "start:dev:watch": "tsx --watch src/index.ts",
+    "start:dist": "npm run dist && node src/index.js"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "L.G.O",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
