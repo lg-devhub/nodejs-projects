@@ -13,7 +13,7 @@
     "start:dist": "npm run dist && --env-file=.env node/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "L.G.O",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
