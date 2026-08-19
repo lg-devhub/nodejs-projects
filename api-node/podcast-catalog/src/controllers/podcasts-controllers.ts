@@ -1,27 +1,19 @@
 import {IncomingMessage, request, ServerResponse} from "http";
+import { serviceListEpisodes } from '../services/list-episodes-services';
+import { serviceFilterEpisodes } from "../services/filter-episodes-services";
 
 export const getListEpisodes = async (req: IncomingMessage, res: ServerResponse) => {
+
+    const content = await serviceListEpisodes()
+
     res.writeHead(200, {'Content-Type': "application/json"});
-    res.end(JSON.stringify([
-{
-    podcastName: "Flow Podcast",
-    episode: "KIM KATAGUIRI - Flow News #059",
-    videoID: "8cPH3EHaAX0",
-    cover: "https://i.ytimg.com/vi/8cPH3EHaAX0/maxresdefault.jpg",
-    link: "https://www.youtube.com/live/8cPH3EHaAX0?si=DD70hb0AX_SAJATK",
-    categories: ["Politics", "News"],
-
-},
-
-{
-    podcastName: "Flow Podcast",
-    episode: "RENAN SANTOS - Flow News #050",
-    videoID: "RtVPdwsiqp0",
-    cover: "https://i.ytimg.com/vi/RtVPdwsiqp0/maxresdefault.jpg",
-    link: "https://www.youtube.com/live/RtVPdwsiqp0?si=9CLKVXiQdxuIdwCo",
-    categories: ["Politics", "News"],
-
-},
-])
-    );
+    res.end(JSON.stringify(content));
 };
+
+export const getFilterEpisodes = async (req: IncomingMessage, res: ServerResponse) => {
+    const content = await serviceFilterEpisodes("flow");
+
+    res.writeHead(200, {'Content-Type': "application/json"});
+    res.end(JSON.stringify(content));
+
+}
