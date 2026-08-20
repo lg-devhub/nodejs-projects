@@ -1,0 +1,60 @@
+export enum AllTypeEncode {
+  UTF8 = "utf-8",
+  UTF16 = "utf-16",
+  UTF16LE = "utf-16le",
+  UTF16BE = "utf-16be",
+  UTF32 = "utf-32",
+  UTF32LE = "utf-32le",
+  UTF32BE = "utf-32be",
+
+  US_ASCII = "us-ascii",
+  ASCII = "ascii",
+
+  ISO_8859_1 = "iso-8859-1",
+  ISO_8859_2 = "iso-8859-2",
+  ISO_8859_3 = "iso-8859-3",
+  ISO_8859_4 = "iso-8859-4",
+  ISO_8859_5 = "iso-8859-5",
+  ISO_8859_6 = "iso-8859-6",
+  ISO_8859_7 = "iso-8859-7",
+  ISO_8859_8 = "iso-8859-8",
+  ISO_8859_9 = "iso-8859-9",
+  ISO_8859_10 = "iso-8859-10",
+  ISO_8859_13 = "iso-8859-13",
+  ISO_8859_14 = "iso-8859-14",
+  ISO_8859_15 = "iso-8859-15",
+  ISO_8859_16 = "iso-8859-16",
+
+  WINDOWS_1250 = "windows-1250",
+  WINDOWS_1251 = "windows-1251",
+  WINDOWS_1252 = "windows-1252",
+  WINDOWS_1253 = "windows-1253",
+  WINDOWS_1254 = "windows-1254",
+  WINDOWS_1255 = "windows-1255",
+  WINDOWS_1256 = "windows-1256",
+  WINDOWS_1257 = "windows-1257",
+  WINDOWS_1258 = "windows-1258",
+
+  SHIFT_JIS = "shift_jis",
+  EUC_JP = "euc-jp",
+  ISO_2022_JP = "iso-2022-jp",
+
+  EUC_KR = "euc-kr",
+  ISO_2022_KR = "iso-2022-kr",
+
+  BIG5 = "big5",
+  GB2312 = "gb2312",
+  GBK = "gbk",
+  GB18030 = "gb18030",
+  HZ_GB_2312 = "hz-gb-2312",
+
+  KOI8_R = "koi8-r",
+  KOI8_U = "koi8-u",
+
+  IBM866 = "ibm866",
+  MACINTOSH = "macintosh",
+  X_MAC_CYRILLIC = "x-mac-cyrillic",
+
+  UCS2 = "ucs-2",
+  UCS4 = "ucs-4",
+}
