@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Podwave — Podcast Manager</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">P</div>
+            <span>podwave</span>
+        </div>
+
+        <nav>
+
+            <p class="nav-title">MENU</p>
+
+            <a href="#" class="nav-link active" data-section="home">
+                <span>⌂</span>
+                Início
+            </a>
+
+            <a href="#" class="nav-link" data-section="explore">
+                <span>◉</span>
+                Explorar
+            </a>
+
+            <a href="#" class="nav-link" data-section="favorites">
+                <span>♡</span>
+                Favoritos
+            </a>
+
+            <a href="#" class="nav-link" data-section="library">
+                <span>▣</span>
+                Minha biblioteca
+            </a>
+
+            <p class="nav-title">GERENCIAMENTO</p>
+
+            <a href="#" class="nav-link" data-section="podcasts">
+                <span>🎙</span>
+                Podcasts
+            </a>
+
+            <a href="#" class="nav-link" data-section="episodes">
+                <span>▶</span>
+                Episódios
+            </a>
+
+            <a href="#" class="nav-link" data-section="analytics">
+                <span>▥</span>
+                Analytics
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link">
+                <span>⚙</span>
+                Configurações
+            </a>
+
+            <a href="#" class="nav-link logout">
+                <span>↪</span>
+                Sair
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-logo">
+                podwave
+            </div>
+
+            <div class="search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar podcasts, episódios..."
+                >
+
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-button">
+                    ♧
+                </button>
+
+                <button class="notification">
+                    ♢
+                    <span></span>
+                </button>
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        LG
+                    </div>
+
+                    <div>
+                        <strong>Luiz Gustavo</strong>
+                        <small>Administrador</small>
+                    </div>
+
+                    <span>⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+
+            <!-- HERO -->
+
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="badge">
+                        PODCAST EM DESTAQUE
+                    </span>
+
+                    <h1>
+                        The Future<br>
+                        of Technology
+                    </h1>
+
+                    <p>
+                        Explore ideias, tecnologia, inteligência artificial
+                        e as histórias que estão moldando o futuro.
+                    </p>
+
+                    <div class="hero-meta">
+
+                        <span>🎙 TechTalk</span>
+                        <span>•</span>
+                        <span>42 min</span>
+                        <span>•</span>
+                        <span>12 episódios</span>
+
+                    </div>
+
+                    <div class="hero-buttons">
+
+                        <button
+                            class="btn-primary"
+                            onclick="playPodcast('The Future of Technology')"
+                        >
+                            ▶ Ouvir agora
+                        </button>
+
+                        <button class="btn-secondary">
+                            + Minha lista
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-gradient"></div>
+
+            </section>
+
+
+            <!-- STATS -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        🎧
+                    </div>
+
+                    <div>
+                        <span>Tempo ouvido</span>
+                        <strong>18h 42m</strong>
+                        <small class="positive">+12.4%</small>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ▶
+                    </div>
+
+                    <div>
+                        <span>Episódios</span>
+                        <strong>247</strong>
+                        <small class="positive">+8.2%</small>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ♡
+                    </div>
+
+                    <div>
+                        <span>Favoritos</span>
+                        <strong>36</strong>
+                        <small class="positive">+4.7%</small>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        🎙
+                    </div>
+
+                    <div>
+                        <span>Podcasts</span>
+                        <strong>24</strong>
+                        <small class="positive">+3 novos</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CATEGORIES -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Explore por categoria</h2>
+                        <p>Encontre conteúdos que combinam com você.</p>
+                    </div>
+
+                    <button class="view-all">
+                        Ver todas →
+                    </button>
+
+                </div>
+
+                <div class="categories">
+
+                    <button class="category active">
+                        Todos
+                    </button>
+
+                    <button class="category">
+                        Tecnologia
+                    </button>
+
+                    <button class="category">
+                        Negócios
+                    </button>
+
+                    <button class="category">
+                        Ciência
+                    </button>
+
+                    <button class="category">
+                        Educação
+                    </button>
+
+                    <button class="category">
+                        Cultura
+                    </button>
+
+                    <button class="category">
+                        Entretenimento
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTINUE -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Continue ouvindo</h2>
+                        <p>Continue de onde você parou.</p>
+                    </div>
+
+                    <button class="view-all">
+                        Ver todos →
+                    </button>
+
+                </div>
+
+
+                <div class="podcast-grid">
+
+                    <article
+                        class="podcast-card"
+                        data-title="The AI Revolution"
+                    >
+
+                        <div class="cover cover-1">
+
+                            <span class="episode-tag">
+                                EP. 42
+                            </span>
+
+                            <button
+                                class="play-button"
+                                onclick="playPodcast('The AI Revolution')"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="card-title-row">
+
+                                <h3>
+                                    The AI Revolution
+                                </h3>
+
+                                <button class="favorite">
+                                    ♡
+                                </button>
+
+                            </div>
+
+                            <p>
+                                Como a inteligência artificial está
+                                transformando nossas vidas.
+                            </p>
+
+                            <div class="card-meta">
+
+                                <span>TechTalk</span>
+                                <span>•</span>
+                                <span>38 min</span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div style="width: 68%"></div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="podcast-card"
+                        data-title="Building the Future"
+                    >
+
+                        <div class="cover cover-2">
+
+                            <span class="episode-tag">
+                                EP. 18
+                            </span>
+
+                            <button
+                                class="play-button"
+                                onclick="playPodcast('Building the Future')"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="card-title-row">
+
+                                <h3>
+                                    Building the Future
+                                </h3>
+
+                                <button class="favorite">
+                                    ♡
+                                </button>
+
+                            </div>
+
+                            <p>
+                                Empreendedores contando como construíram
+                                seus produtos.
+                            </p>
+
+                            <div class="card-meta">
+
+                                <span>Founders</span>
+                                <span>•</span>
+                                <span>51 min</span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div style="width: 32%"></div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="podcast-card"
+                        data-title="Mind & Science"
+                    >
+
+                        <div class="cover cover-3">
+
+                            <span class="episode-tag">
+                                EP. 09
+                            </span>
+
+                            <button
+                                class="play-button"
+                                onclick="playPodcast('Mind & Science')"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="card-title-row">
+
+                                <h3>
+                                    Mind & Science
+                                </h3>
+
+                                <button class="favorite">
+                                    ♡
+                                </button>
+
+                            </div>
+
+                            <p>
+                                Neurociência, comportamento e os mistérios
+                                da mente humana.
+                            </p>
+
+                            <div class="card-meta">
+
+                                <span>Science Lab</span>
+                                <span>•</span>
+                                <span>44 min</span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div style="width: 82%"></div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="podcast-card"
+                        data-title="The Creative Process"
+                    >
+
+                        <div class="cover cover-4">
+
+                            <span class="episode-tag">
+                                EP. 27
+                            </span>
+
+                            <button
+                                class="play-button"
+                                onclick="playPodcast('The Creative Process')"
+                            >
+                                ▶
+                            </button>
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="card-title-row">
+
+                                <h3>
+                                    The Creative Process
+                                </h3>
+
+                                <button class="favorite">
+                                    ♡
+                                </button>
+
+                            </div>
+
+                            <p>
+                                Conversas sobre criatividade, arte e
+                                desenvolvimento pessoal.
+                            </p>
+
+                            <div class="card-meta">
+
+                                <span>Creative Lab</span>
+                                <span>•</span>
+                                <span>29 min</span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div style="width: 48%"></div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- POPULAR -->
+
+            <section class="section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Podcasts populares</h2>
+                        <p>Os programas mais ouvidos da plataforma.</p>
+                    </div>
+
+                    <button class="view-all">
+                        Ver todos →
+                    </button>
+
+                </div>
+
+
+                <div class="horizontal-list">
+
+                    <div class="small-card">
+
+                        <div class="small-cover cover-5">
+                            🎙
+                        </div>
+
+                        <div>
+                            <h3>Dark Matter</h3>
+                            <p>Science Lab</p>
+                            <span>128 episódios</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="small-card">
+
+                        <div class="small-cover cover-6">
+                            🎧
+                        </div>
+
+                        <div>
+                            <h3>Startup Stories</h3>
+                            <p>Founders</p>
+                            <span>84 episódios</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="small-card">
+
+                        <div class="small-cover cover-7">
+                            🎤
+                        </div>
+
+                        <div>
+                            <h3>Inside Culture</h3>
+                            <p>Culture Hub</p>
+                            <span>62 episódios</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- AUDIO PLAYER -->
+
+    <div class="player" id="player">
+
+        <div class="player-info">
+
+            <div class="player-cover">
+                🎧
+            </div>
+
+            <div>
+
+                <strong id="playerTitle">
+                    Nenhum episódio
+                </strong>
+
+                <span>
+                    Podwave
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="player-controls">
+
+            <div class="controls">
+
+                <button>↶</button>
+
+                <button
+                    class="main-play"
+                    id="mainPlay"
+                    onclick="togglePlay()"
+                >
+                    ▶
+                </button>
+
+                <button>↷</button>
+
+            </div>
+
+            <div class="timeline">
+
+                <span>00:00</span>
+
+                <div class="timeline-bar">
+                    <div></div>
+                </div>
+
+                <span>42:18</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="player-options">
+
+            <button>♧</button>
+
+            <button>🔊</button>
+
+            <div class="volume">
+                <div></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL -->
+
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeModal()"
+            >
+                ×
+            </button>
+
+            <h2>Novo podcast</h2>
+
+            <p>
+                Cadastre um novo podcast na plataforma.
+            </p>
+
+            <form>
+
+                <label>
+                    Nome do podcast
+                    <input
+                        type="text"
+                        placeholder="Ex: TechTalk"
+                    >
+                </label>
+
+                <label>
+                    Descrição
+                    <textarea
+                        placeholder="Descrição do podcast..."
+                    ></textarea>
+                </label>
+
+                <label>
+                    Categoria
+                    <select>
+                        <option>Tecnologia</option>
+                        <option>Negócios</option>
+                        <option>Ciência</option>
+                        <option>Educação</option>
+                    </select>
+                </label>
+
+                <button class="btn-primary">
+                    Criar podcast
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
